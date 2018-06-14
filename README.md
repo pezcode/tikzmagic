@@ -6,11 +6,11 @@ A Jupyter extension for compiling and displaying images described by the [TikZ](
 
 - IPython/Jupyter
 - LaTeX (`xelatex`)
-- ImageMagick
+- ImageMagick 7 or higher
 
 ## Installation
 
-```pip install git+git://github.com/robjstan/tikzmagic.git```
+```pip install git+git://github.com/pezcode/tikzmagic.git```
 
 ## Usage
 
