@@ -11,7 +11,7 @@ from os.path import isfile
 from os import getcwd
 
 from IPython.core.magic import register_line_cell_magic
-from IPython.core.display import Image
+from IPython.display import Image
 
 LATEX_TEMPLATE = r'''
 \documentclass[tikz,border={border}]{{standalone}}
@@ -87,7 +87,7 @@ def latex2image(latex, density, export_file=None):
          # convert PDF to PNG
         sh_convert(in_file=temp_pdf, out_file=temp_png, density=density)
 
-        return Image(data=b64encode(open(temp_png, "rb").read()))
+        return Image(temp_png)
     finally:
         # remove temp directory
         shutil.rmtree(temp_dir)
