@@ -99,7 +99,7 @@ def sh_latex(in_file, out_dir):
 
 def sh_convert(in_file, out_file, density=96):
     '''Use ImageMagick to convert PDF to PNG.'''
-    subprocess.call(['convert', '-density', str(density), in_file, out_file])
+    subprocess.call(['magick', 'convert', '-density', str(density), in_file, out_file])
 
 def load_ipython_extension(ipython):
     '''Load iPython extension. Empty as we don't need to do anything.'''
